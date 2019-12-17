@@ -2,7 +2,7 @@
 function connectDB() {
 ## Database stuff
 global $db;
-$db = ($GLOBALS["___mysqli_ston"] = mysqli_connect('localhost', 'root', 'XXXXXXXXXX'));
+$db = ($GLOBALS["___mysqli_ston"] = mysqli_connect('localhost', 'root', ''));
 	if (!$db) {
     printf("Errormessage: %s\n", mysqli_error($db));
 	die("Unable to connect to database");

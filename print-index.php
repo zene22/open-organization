@@ -39,6 +39,46 @@ This tool is based on the <a href="http://www.opensource.com/open-organization/r
 ';
 }
 
+function printdeindex() {
+print '
+<div class="container">
+
+<h3>Wilkommen zum Open Organization Capability Model</h3>
+
+<p class="mainText">
+Das Open Organization Capability Model ist ein Werkzeug, das Ihnen hilft, die Kultur Ihrer Organisation einzuschätzen.
+</p>
+
+<p class="mainText">
+Genauer gesagt, misst das Werkzeug das relative Niveau der Offenheit ihrer Organisation, mit besonderem Augenmerk auf die fünf offenen Prinzipien, die in der <a href="https://github.com/open-organization-ambassadors/open-org-definition/blob/master/open_org_definition.md" target=_blank><b>Open Organization Definition</b></a> dargestellt werden:
+</p>
+
+<ul>
+        <li class="mainText">Transparenz</li>
+        <li class="mainText">Inklusivität</li>
+        <li class="mainText">Anpassungsfähigkeit</li>
+        <li class="mainText">Zusammenarbeit</li>
+        <li class="mainText">Gemeinschaft</li>
+</ul>
+
+<p class="mainText">
+Im Rahmen des Bewertungsprozesses erfahren Sie, wie Einzelpersonen, Teams und Organisationen ihre Organisationspraktiken kritisch prüfen und ihre Fortschritte auf dem Weg zu einer offeneren Organisation dokumentieren können.
+</p>
+
+<p class="mainText">
+Dieses Tool basiert auf dem <a href="http://www.opensource.com/open-organization/resources/open-org-maturity-model" target=_blank><b>Open Organization Maturity Model</b></a>, das von der Open Organization Community auf Opensource.com verwaltet wird.
+</p>
+
+<p class="mainText">Bevor Sie mit der Bewertung beginnen, denken Sie daran: Alle Organisationen unterscheiden sich und wenden in unterschiedlichem Maße offene Prinzipien und Praktiken an. Das dreistufige Design dieses Modells zielt daher sowohl darauf ab, Organisationen bei der Bestimmung des relativen Grades ihres offenen Handelns zu unterstützen als auch ihnen dabei zu helfen, Möglichkeiten zu erkunden, dies zu tun.
+</p>
+
+<p class="mainText">
+<b>Important note:</b> Dieses Werkzeug ist für die Verwendung in Verbindung mit einem geführten Gespräch in einem Workshop vorgesehen. Die Ergebnisse sollten nur als Diskussionsgrundlage in einem Lernkontext verwendet werden. Dieses Werkzeug dient in keiner Weise einer vollständigen oder umfassenden Bewertung der Fähigkeiten eines gesamten Unternehmens.
+</p>
+</div>
+';
+}
+
 function printruindex() {
 print '
 <div class="container">

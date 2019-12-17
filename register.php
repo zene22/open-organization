@@ -29,6 +29,7 @@ if (isset($_POST['signup'])) {
 	$password = mysqli_real_escape_string($GLOBALS["___mysqli_ston"], $_POST['password']);
 	$cpassword = mysqli_real_escape_string($GLOBALS["___mysqli_ston"], $_POST['cpassword']);
 	
+
 	//name can contain only alpha characters and space
 	if (!preg_match("/^[a-zA-Z ]+$/",$name)) {
 		$error = true;
@@ -58,13 +59,14 @@ if (isset($_POST['signup'])) {
 ## validate
 $curl = curl_init();
 
+echo "x${curl}x";
 // Configure options, incl. post-variables to send.
 curl_setopt_array($curl, array(
     CURLOPT_RETURNTRANSFER => 1,
     CURLOPT_URL => 'https://www.google.com/recaptcha/api/siteverify',
     CURLOPT_POST => 1,
     CURLOPT_POSTFIELDS => array(
-        'secret' => '6LdWYl0UAAAAAF-OOWcmOaFeiBFamk36-G6BVAHq',
+        'secret' => '6Lfy6L8UAAAAAIKIUv7QoQnfI8e_QrRHjpRPDTGq',
         'response' => $_POST['g-recaptcha-response']
     )
 ));
@@ -74,19 +76,20 @@ $resp = curl_exec($curl);
 
 // Free resources.
 curl_close($curl);
+echo "x${resp}x";
 
 // Validate response
-if(strpos($resp, '"success": true') !== FALSE) {
-#    echo "Verified.";
+#if(strpos($resp, '"success": true') !== FALSE) {
+    echo "Verified.";
 		$qq = "INSERT INTO users(name,email,password,uuid) VALUES('" . $name . "', '" . $email . "', '" . md5($password) . "',uuid())	";
-#		print "Query: $qq";
+		print "Query: $qq";
 		if(mysqli_query($GLOBALS["___mysqli_ston"], $qq )) {
 			$successmsg = "Successfully Registered! <a href='login.php'>Click here to Login</a>";
 		} else {
 			$errormsg = "Error in registering...Please try again later!";
 		}
 
-} 
+#} 
 
 }
 ?>
@@ -159,7 +162,7 @@ if(strpos($resp, '"success": true') !== FALSE) {
         <?php #echo Securimage::getCaptchaHtml() ?>
         						<span class="text-danger"><?php if (isset($captcha_error)) echo "<br>$captcha_error"; ?></span>
     </div>
-<div class="g-recaptcha" data-sitekey="6LdWYl0UAAAAAP8dt8bpKnfqtWKpAZ8bnNHK09-b"></div>
+<div class="g-recaptcha" data-sitekey="6Lfy6L8UAAAAAFQtWJhBIcZW2KHtrYSKNnQ0La5-"></div>
 					<div class="form-group">
 						<input type="submit" name="signup" value="Sign Up" class="btn btn-primary" />
 					</div>

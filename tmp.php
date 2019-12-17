@@ -34,8 +34,11 @@ if (!$result) {
 }
 
 
-# Check the referer to see if we need to go to english or russian
-if (preg_match('/lang=ru/', $_SERVER['HTTP_REFERER'])) {
+# Check the referer to see if we need to go to english or russian or german
+if (preg_match('/lang=de/', $_SERVER['HTTP_REFERER'])) {
+## German
+header("Location: results-de.php?hash=$hash");
+} else if (preg_match('/lang=ru/', $_SERVER['HTTP_REFERER'])) {
 ## Russian
 header("Location: results-ru.php?hash=$hash");
 } else {

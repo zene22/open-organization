@@ -5,7 +5,7 @@ session_start();
     }
     $language = (isset($_SESSION['lang']) ? $_SESSION['lang'] : "en");
 
-if (($language != "ru") && ($language != "en")) {
+if (($language != "ru") && ($language != "de") && ($language != "en")) {
 	$language = "en";
 	$_SESSION['lang'] = "en";
 }
@@ -83,6 +83,7 @@ $("#input").slider({
 		<div class="collapse navbar-collapse" id="navbar1">
 			<ul class="nav navbar-nav navbar-right">
 			<li><a href=assess.php?lang=en>English</a></li>
+			<li><a href=assess.php?lang=de>Deutsch</a></li>
 			<li><a href=assess.php?lang=ru>Pусский</a></li>
 				<li><p class="navbar-text">Подписано как <?php echo $_SESSION['usr_name']; ?></p></li>
 				<li><a href="passwd.php">Изменить пароль</a></li>

@@ -82,9 +82,9 @@ $("#input").slider({
 			<li><a href=assess.php?lang=en>English</a></li>
 			<li><a href=assess-de.php?lang=de>Deutsch</a></li>
 			<li><a href=assess-ru.php?lang=ru>Pусский</a></li>
-				<li><p class="navbar-text">Signed in as <?php echo $_SESSION['usr_name']; ?></p></li>
-				<li><a href="passwd.php">Change Password</a></li>
-				<li><a href="logout.php">Log Out</a></li>
+				<li><p class="navbar-text">Angemeldet als <?php echo $_SESSION['usr_name']; ?></p></li>
+				<li><a href="passwd.php">Passwort ändern</a></li>
+				<li><a href="logout.php">Abmelden</a></li>
 			</ul>
 		</div>
 	</div>
@@ -95,69 +95,69 @@ $("#input").slider({
 <form id="regForm" action="tmp.php">
   <!-- One "tab" for each step in the form: -->
   <div class="tab">
-<h3>Welcome to the Open Organization Capability Model</h3>
+<h3>Wilkommen zum Open Organization Capability Model</h3>
 
 <p class="mainText">
-The Open Organization Capability Model is a tool for assessing your organization's culture.
+Das Open Organization Capability Model ist ein Werkzeug zur Bewertung der Unternehmenskultur.
 </p>
 
 <p class="mainText">
-More specifically, the tool measures your organization's relative degree of openness, with particular attention to five open principles outlined in the <a href="https://github.com/open-organization-ambassadors/open-org-definition/blob/master/open_org_definition.md" target=_blank><b>Open Organization Definition</b></a>:
+Genauer gesagt, misst das Werkzeug das relative Niveau der Offenheit ihrer Organisation, mit besonderem Augenmerk auf die fünf offenen Prinzipien, die in der <a href="https://github.com/open-organization-ambassadors/open-org-definition/blob/master/open_org_definition.md" target=_blank><b>Open Organization Definition</b></a> dargestellt werden:
 </p>
 
 <ul>
-        <li class="mainText">Transparency</li>
-        <li class="mainText">Inclusivity</li>
-        <li class="mainText">Adaptability</li>
-        <li class="mainText">Collaboration</li>
-        <li class="mainText">Community</li>
+        <li class="mainText">Transparenz</li>
+        <li class="mainText">Inklusivität</li>
+        <li class="mainText">Anpassungsfähigkeit</li>
+        <li class="mainText">Zusammenarbeit</li>
+        <li class="mainText">Gemeinschaft</li>
 </ul>
 
 <p class="mainText">
-As part of the assessment process, you'll learn how individuals, teams, and organizations can critically examine their organizational practices and chart their progress toward becoming a more open organization.
+Im Rahmen des Bewertungsprozesses erfahren Sie, wie Einzelpersonen, Teams und Organisationen ihre Organisationspraktiken kritisch prüfen und ihre Fortschritte auf dem Weg zu einer offeneren Organisation dokumentieren können.
 </p>
 
 <p class="mainText">
-This tool is based on the <a href="http://www.opensource.com/open-organization/resources/open-org-maturity-model" target=_blank><b>Open Organization Maturity Model</b></a>, which the open organization community at Opensource.com maintains.
+Dieses Tool basiert auf dem <a href="http://www.opensource.com/open-organization/resources/open-org-maturity-model" target=_blank><b>Open Organization Maturity Model</b></a>, das von der Open Organization Community auf Opensource.com verwaltet wird.
 </p>
 
-<p class="mainText">Before beginning this assessment, remember: All organizations are different, so they adopt open principles and practices to different degrees. This model's three-level design therefore aims both to assist organizations determining the relative degree to which they act openly and to help them explore possibilities for becoming more so.
+<p class="mainText">Bevor Sie mit der Bewertung beginnen, denken Sie daran: Alle Organisationen unterscheiden sich und wenden in unterschiedlichem Maße offene Prinzipien und Praktiken an. Das dreistufige Design dieses Modells zielt daher sowohl darauf ab, Organisationen bei der Bestimmung des relativen Grades ihres offenen Handelns zu unterstützen als auch ihnen dabei zu helfen, Möglichkeiten zu erkunden, dies zu tun.
 </p>
 
 <p class="mainText">
-<b>Important note:</b> This tool is intended for use in conjunction with guided conversation in a workshop setting. Results should be used only as a basis for discussion in a learning context. This tool is no way a complete or comprehensive assessment of an entire organization's capabilities.
+<b>Wichtiger Hinweis:</b> Dieses Werkzeug ist für die Verwendung in Verbindung mit einem geführten Gespräch in einem Workshop vorgesehen. Die Ergebnisse sollten nur als Diskussionsgrundlage in einem Lernkontext verwendet werden. Dieses Werkzeug dient in keiner Weise einer vollständigen oder umfassenden Bewertung der Fähigkeiten eines gesamten Unternehmens.
 </p>
 
   </div>
-  <div class="tab"><h4>Customer Details</h4>
-    <p><input placeholder="Client Name" oninput="this.className = ''" name="customerName" ></p>
-    <p><input placeholder="Email Address" oninput="this.className = ''" name="rhEmail"  ></p>
-    <p><input placeholder="Project/Team" oninput="this.className = ''" name="project"  ></p>
+  <div class="tab"><h4>Kundendetails</h4>
+    <p><input placeholder="Name des Kunden" oninput="this.className = ''" name="customerName" ></p>
+    <p><input placeholder="Email Adresse" oninput="this.className = ''" name="rhEmail"  ></p>
+    <p><input placeholder="Projekt/Team" oninput="this.className = ''" name="project"  ></p>
 <!-- <label class="checkbox-inline">
-  <input type="checkbox" class="shareBox" name="share" id="share" checked> Do you agree that the anonymous results can be used for comparative purposes?
+  <input type="checkbox" class="shareBox" name="share" id="share" checked> Stimmen Sie zu, dass die anonymen Ergebnisse zu Vergleichszwecken verwendet werden dürfen?
 
  </label>
- --><p>Do you agree that the anonymous results can be used for comparative purposes?</p>
+ --><p>Stimmen Sie zu, dass die anonymen Ergebnisse zu Vergleichszwecken verwendet werden dürfen?</p>
 
-<input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No" name="share" id="share" data-size="normal" data-onstyle="success"  data-offstyle="danger" checked>
-    <p class="mainTextItalic">Note: comparisons are only available if you opt-in to share data</p>
+<input type="checkbox" data-toggle="toggle" data-on="Ja" data-off="Nein" name="share" id="share" data-size="normal" data-onstyle="success"  data-offstyle="danger" checked>
+    <p class="mainTextItalic">Information: Vergleiche sind nur verfügbar, wenn Sie die Freigabe von Daten aktivieren</p>
 
 
- <p>Do you agree that Red Hat may follow up with you via email after this assessment?</p>
+ <p>Stimmen Sie zu, dass Red Hat Sie nach dieser Bewertung per E-Mail kontaktieren darf?</p>
 
-<input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No" name="contact" id="contact" data-size="normal" data-onstyle="success"  data-offstyle="danger" checked>
+<input type="checkbox" data-toggle="toggle" data-on="Ja" data-off="Nein" name="contact" id="contact" data-size="normal" data-onstyle="success"  data-offstyle="danger" checked>
 <br><br>
-<p>Please select Country and Line of Business using the drop down lists</p>
-<?php putCountries();?>
+<p>Bitte wählen Sie in den Dropdown-Listen Land und Branche aus</p>
+<?php putCountries_de();?>
 
-<?php putLoBs();?>
+<?php putLoBs_de();?>
     
   </div>
   
 <?php
 
 function printQuestions($title,$area) {
-$string = file_get_contents("questionsV2.json");
+$string = file_get_contents("questionsV2-de.json");
 $json = json_decode( preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $string), true );
 
 $i=1;
@@ -181,7 +181,7 @@ while( $i < 4) {
    print '<b>Level ' . $i . '</b>'; 
 	print '<p>' . $json[$area][$i] . "</p>";
 #	if ($json[$type][$area][$i]['description'] != "XXX") {
-#		print '<a href="#" title="' . $json[$type][$area][$i]['description'] . '">More Detail</a>';
+#		print '<a href="#" title="' . $json[$type][$area][$i]['description'] . '">Mehr Details</a>';
 #	}
 	print "</div>";
 $i++;
@@ -189,49 +189,49 @@ $i++;
 print '</div>
 </div>';
 print '</div>';
-print "<hr><h4 class='headerCentered'>Now</h4>";
+print "<hr><h4 class='headerCentered'>Status Quo</h4>";
 print '<input data-slider-id="sliderCol" class="slider" type="range" data-slider-value="1"  name="d' . $qnum . '" type="text" data-slider-rangeHighlights=[{ "start": 0, "end": 1, "class": "category1" }, { "start": 1, "end": 2, "class": "category2" }, { "start": 2, "end": 3, "class": "category3" }] />';
 print "
 <h4 class='headerCentered'>Vision</h4>";
 print '<input data-slider-id="sliderCol" class="slider" type="range" data-slider-value="1"  name="o' . $qnum . '" type="text" data-slider-rangeHighlights=[{ "start": 0, "end": 2, "class": "category1" }, { "start": 1, "end": 2, "class": "category2" }, { "start": 2, "end": 3, "class": "category3" }] />';
 print "<br>";
-print "<h4>Notes</h4>";
+print "<h4>Hinweise</h4>";
 print '<textarea form=regForm name="comments_' . $area . '" id="comments_' . $area . ' wrap="soft" rows="2"></textarea>';
 };
 
 ?>  
   
   <div class="tab">
-<?php printQuestions("Transparency","transparency");  ?>
+<?php printQuestions("Transparenz","transparency");  ?>
   </div>
 
   <div class="tab">
-<?php printQuestions("Inclusivity","inclusivity");  ?>
+<?php printQuestions("Inklusivität","inclusivity");  ?>
   </div>
 
   <div class="tab">
-<?php printQuestions("Adaptability","adaptability");  ?>
+<?php printQuestions("Anpassungsfähigkeit","adaptability");  ?>
   </div>
 
   <div class="tab">
-<?php printQuestions("Collaboration","collaboration");  ?>
+<?php printQuestions("Zusammenarbeit","collaboration");  ?>
   </div>
 
   <div class="tab">
-<?php printQuestions("Community","community");  ?>
+<?php printQuestions("Gemeinschaft","community");  ?>
   </div>
 
   <div class="tab">
-<h2>Discussion Points</h2>
-  <h4> Please add any discussion points or other information here</h4>
+<h2>Diskussionspuntke</h2>
+  <h4> Bitte fügen sie etwaige Diskussionspunkte oder weitere Informationen hier ein</h4>
 <br>
 <textarea form=regForm name="comments" id="comments" wrap="soft" rows="20"></textarea>
   </div>
 
   <div style="overflow:auto;">
     <div style="float:right;">
-      <button type="button" id="prevBtnCJ" onclick="nextPrev(-1)">Previous</button>
-      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+      <button type="button" id="prevBtnCJ" onclick="nextPrev(-1)">Zurück</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Weiter</button>
     </div>
   </div>
   <!-- Circles which indicates the steps of the form: -->
@@ -262,9 +262,9 @@ function showTab(n) {
     document.getElementById("prevBtnCJ").style.display = "inline";
   }
   if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
+    document.getElementById("nextBtn").innerHTML = "Abschicken";
   } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
+    document.getElementById("nextBtn").innerHTML = "Weiter";
   }
   //... and run a function that will display the correct step indicator:
   fixStepIndicator(n)

@@ -5,7 +5,7 @@ session_start();
     }
     $language = (isset($_SESSION['lang']) ? $_SESSION['lang'] : "en");
 
-if (($language != "ru") && ($language != "en")) {
+if (($language != "ru") && ($language != "de") && ($language != "en") ) {
 	$language = "en";
 	$_SESSION['lang'] = "en";
 }
@@ -57,6 +57,7 @@ include 'print-index.php';
 			<ul class="nav navbar-nav navbar-right">
 			<li><a href=index.php?lang=en>English</a></li>
 			<li><a href=index.php?lang=ru>Pусский</a></li>
+			<li><a href=index.php?lang=de>German</a></li>
 				<?php if (isset($_SESSION['usr_id'])) { ?>
 				<li><a href="assess.php">Run Assessment</a></li>
 				<li><p class="navbar-text">Signed in as <?php echo $_SESSION['usr_name']; ?></p></li>
@@ -94,6 +95,9 @@ switch ($language) {
 		break;
 	case "ru":
 		printruindex();
+		break;
+	case "de":
+		printdeindex();
 		break;
    default:
 		printenindex();
